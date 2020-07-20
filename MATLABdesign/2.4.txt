@@ -1,0 +1,44 @@
+%M2.4) a)generating sinusoidal sequence-------------
+
+clear all
+close all
+
+A=3;  %amplitude
+L=5; %length
+wo=2*pi; %angular frequency (between 0 and pi)
+p=0; %phase angle (between 0 and 2pi)
+
+figure
+n=linspace(0,L,100); %linear x axis until L, 200 in between
+x=A*cos(wo*n+p);
+stem(n,x);
+title('Generated Cosine wave');
+
+%M2.4) b) varying angular frequencies--------------
+figure()
+x1=A*cos(0.14*pi*n+p); %0.14
+G1=stem(n,x1);
+title('0.14*pi Angular Frequency');
+
+figure()
+x2=A*cos(0.24*pi*n+p); %0.24
+G2=stem(n,x2);
+title('0.24*pi Angular Frequency');
+
+figure()
+x3=A*cos(0.34*pi*n+p); %0.34
+G3=stem(n,x3);
+title('0.34*pi Angular Frequency');
+
+figure()
+x4=A*cos(0.68*pi*n+p); %0.68
+G4=stem(n,x4);
+title('0.68*pi Angular Frequency');
+
+figure()
+x5=A*cos(0.75*pi*n+p); %0.75
+G5=stem(n,x5);
+title('0.75*pi Angular Frequency');
+
+
+
